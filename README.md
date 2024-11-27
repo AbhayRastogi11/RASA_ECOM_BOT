@@ -8,7 +8,7 @@ bash
 Copy code
 rasa_ecommerce_chatbot/
 ├── actions/
-│   ├── _init_.py
+│   ├── __init__.py
 │   ├── actions.py       # Contains custom action logic and API integration
 │   ├── custom_executor  # Custom executor for handling special action logic
 │   ├── custom_actions.py # Contains specific custom actions
@@ -94,15 +94,18 @@ Unit Tests: Unit tests can be written to ensure that custom actions, such as pro
 Prerequisites
 Install the necessary dependencies:
 
+bash
+Copy code
 pip install -r requirements.txt
 Train the Rasa model:
+
 
 rasa train
 Start the action server:
 
+
 rasa run actions
 Start the Rasa shell (for testing in terminal):
-
 
 rasa shell
 Alternatively, you can integrate the bot with different channels such as Facebook Messenger, Slack, or use Rasa's REST API.
