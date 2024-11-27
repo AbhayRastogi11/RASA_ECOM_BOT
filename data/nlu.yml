@@ -1,0 +1,216 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - howdy
+    - what's up
+    - what's good
+    - greetings
+    - hey there, how's it going?
+    - hi there, how are you?
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - is this a chatbot?
+    - are you a robot?
+    - is this conversation automated?
+    - is there anyone real here?
+    - are you human or machine?
+
+- intent: product_inquiry
+  examples: |
+        - Tell me about [jacket](product_name)
+        - I want details about [laptop](product_name)
+        - What is the price of [ring](product_name)
+        - Tell me about [Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops](product_name)
+        - I want details about [Mens Casual Premium Slim Fit T-Shirts](product_name)
+        - What is the price of [Mens Cotton Jacket](product_name)
+        - Tell me about [Mens Casual Slim Fit](product_name)
+        - I want details about [John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet](product_name)
+        - What is the price of [Solid Gold Petite Micropave](product_name)
+        - Tell me about [White Gold Plated Princess](product_name)
+        - I want details about [Pierced Owl Rose Gold Plated Stainless Steel Double](product_name)
+        - What is the price of [WD 2TB Elements Portable External Hard Drive - USB 3.0](product_name)
+        - Tell me about [SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s](product_name)
+        - I want details about [Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5](product_name)
+        - What is the price of [WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive](product_name)
+        - Tell me about [Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin](product_name)
+        - I want details about [Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) - Super Ultrawide Screen QLED](product_name)
+        - What is the price of [BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats](product_name)
+        - Tell me about [Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket](product_name)
+        - I want details about [Rain Jacket Women Windbreaker Striped Climbing Raincoats](product_name)
+        - What is the price of [MBJ Women's Solid Short Sleeve Boat Neck V](product_name)
+        - Tell me about [Opna Women's Short Sleeve Moisture](product_name)
+        - I want details about [DANVOUY Womens T Shirt Casual Cotton Short](product_name)
+
+- intent: bargain
+  examples: |
+    - Can I get a discount?
+    - That's too expensive, any offers?
+    - Can you reduce the price?
+    - Can I get a better deal?
+    - Can you lower the price for me?
+    - Is there any discount available?
+    - Can you make it cheaper?
+    - Do you have any special offers?
+    - Can you give me a discount on that?
+    - What's the best price you can offer?
+
+- intent: order_tracking
+  examples: |
+    - Where is my order?
+    - Can you track my order?
+    - I want to know the status of my order.
+    - Where is my package?
+    - How can I track my order?
+    - Is my order on the way?
+    - What is the current status of my order?
+    - Where is my shipment?
+    - I need to know where my order is.
+    - Can you tell me the delivery status of my order?
+
+- intent: fallback
+  examples: |
+    - gibberish
+    - unknown
+    - How are clouds made?
+    - I don't understand
+    - Can you explain that again?
+    - I didn't get that
+    - What do you mean?
+    - Can you rephrase that?
+    - I don't know what you're asking
+    - I didn't catch that
+
+- intent: greet_hin
+  examples: |
+    - नमस्ते
+    - हेलो
+    - शुभ प्रभात
+    - शुभ संध्या
+    - सुप्रभात
+    - हाय
+    - हैलो
+    - कैसे हो?
+    - क्या हाल है?
+    - हाय, कैसे हो?
+
+- intent: product_inquiry_hin
+  examples: |
+    - [jacket](product_name) के बारे में बताएं
+    - [laptop](product_name) का दाम क्या है?
+    - [smartphone](product_name) का दाम क्या है?
+    - [Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops](product_name) के बारे में बताएं
+    - [Mens Casual Premium Slim Fit T-Shirts](product_name) के बारे में बताएं
+    - [Mens Cotton Jacket](product_name) के बारे में बताएं
+    - [Mens Casual Slim Fit](product_name) का दाम क्या है?
+    - [John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet](product_name) का दाम क्या है?
+    - [Solid Gold Petite Micropave](product_name) के बारे में बताएं
+    - [White Gold Plated Princess](product_name) का दाम क्या है?
+    - [Pierced Owl Rose Gold Plated Stainless Steel Double](product_name) के बारे में बताएं
+    - [WD 2TB Elements Portable External Hard Drive - USB 3.0](product_name) के बारे में बताएं
+    - [SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s](product_name) के बारे में बताएं
+    - [Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5](product_name) के बारे में बताएं
+    - [WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive](product_name) का दाम क्या है?
+    - [Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin](product_name) के बारे में बताएं
+    - [Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) - Super Ultrawide Screen QLED](product_name) के बारे में बताएं
+    - [BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats](product_name) का दाम क्या है?
+    - [Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket](product_name) के बारे में बताएं
+    - [Rain Jacket Women Windbreaker Striped Climbing Raincoats](product_name) के बारे में बताएं
+    - [MBJ Women's Solid Short Sleeve Boat Neck V](product_name) के बारे में बताएं
+    - [Opna Women's Short Sleeve Moisture](product_name) के बारे में बताएं
+    - [DANVOUY Womens T Shirt Casual Cotton Short](product_name) का दाम क्या है?
+    - [बैग](product_name) के बारे में बताएं
+    - [टी-शर्ट](product_name) का दाम क्या है?
+    - [जैकेट](product_name) का दाम क्या है?
+    - [जुते](product_name) के बारे में बताएं
+    - [घड़ी](product_name) का दाम क्या है?
+    - [स्मार्टफोन](product_name) का दाम क्या है?
+    - [लैपटॉप](product_name) के बारे में बताएं
+    - [पेटी](product_name) के बारे में बताएं
+    - [सैनडिस्क एसएसडी](product_name) के बारे में बताएं
+    - [पोर्टेबल हार्ड ड्राइव](product_name) के बारे में बताएं
+    - [मॉनिटर](product_name) का दाम क्या है?
+    - [बैग](product_name) का दाम क्या है?
+    - [हॉडिश](product_name) के बारे में बताएं
+    - [किसान उपकरण](product_name) के बारे में बताएं
+    - [कम्प्यूटर स्टोर](product_name) के बारे में बताएं
+    - [जूते](product_name) का दाम क्या है?
+    - [वॉटर ड्रिंक्स](product_name) के बारे में बताएं
+    - [बैग](product_name) के बारे में बताएं
+    - [जैकट](product_name) का दाम क्या है?
+
+- intent: bargain_hin
+  examples: |
+    - क्या आप रियायत देंगे?
+    - यह महंगा है, कोई ऑफर है?
+    - क्या आप कीमत घटा सकते हैं?
+    - मुझे कोई बेहतर डील मिल सकती है?
+    - क्या आप मुझे छूट दे सकते हैं?
+    - इस पर कोई विशेष ऑफर है?
+    - क्या आप कीमत कम कर सकते हैं?
+    - क्या कोई और डिस्काउंट मिल सकता है?
+    - आप मुझे इसके लिए छूट देंगे?
+    - क्या आपको कोई विशेष ऑफर मिल सकता है?
+
+
+- intent: order_tracking_hin
+  examples: |
+    - मेरा ऑर्डर कहाँ पहुँचा है?
+    - क्या आप बता सकते हैं कि मेरा ऑर्डर अभी कहाँ है?
+    - मुझे मेरे ऑर्डर की स्थिति जाननी है।
+    - मेरा पार्सल ट्रैक करें।
+    - मेरे ऑर्डर का स्टेटस क्या है?
+    - क्या मेरा ऑर्डर डिलीवर हो गया है?
+    - मेरा ऑर्डर कितने समय में आएगा?
+
+- intent: fallback_hin
+  examples: |
+    - मुझे समझ नहीं आया।
+    - यह क्या है?
+    - आपको क्या कहना है?
+    - बादल कैसे बनते हैं?
+    - पंछी कैसे उड़ते हैं?
+    - गिब्बरिश टेक्स्ट
+    - अजीब सवाल
+    - इसका जवाब मुझे नहीं पता।
+
+- intent: provide_order_id
+  examples: |
+    - My order ID is [ORD123](order_id)
+    - Check order status for [ORD987](order_id)
+    - Track my order with ID [ord456](order_id)
+    - The order ID is [ord789](order_id)
+    - Please find details for [ORD321](order_id)
+    - [ORD654](order_id) is my order ID
+    - I want to check the status of [ord001](order_id)
+    - Look up order ID [ORD123](order_id)
+
+- intent: provide_order_id_hin
+  examples: |
+    - मेरा ऑर्डर आईडी [ORD123](order_id) है
+    - ऑर्डर आईडी [ORD987](order_id) के लिए स्टेटस चेक करें
+    - [ORD456](order_id) के बारे में जानकारी चाहिए
+    - [ORD789](order_id) का स्टेटस बताएं
+    - मेरा ऑर्डर आईडी है [ORD321](order_id)
+    - [ORD654](order_id) ऑर्डर आईडी है
+    - कृपया [ORD001](order_id) के लिए जानकारी प्रदान करें
+    - ऑर्डर नंबर [ORD123](order_id) को ट्रैक करें

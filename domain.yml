@@ -1,0 +1,95 @@
+version: "3.1"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+intents:
+  - greet
+  - greet_hin
+  - bot_challenge
+  - product_inquiry
+  - bargain
+  - order_tracking
+  - goodbye
+  - fallback
+  - product_inquiry_hin
+  - bargain_hin
+  - order_tracking_hin
+  - fallback_hin
+  - provide_order_id
+  - provide_order_id_hin
+
+entities:
+  - product_name
+  - order_id
+
+slots:
+  product_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+
+  current_discount:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_text
+
+  order_id:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: order_id
+
+responses:
+  utter_greet:
+    - text: "Hello! 😊 How can I assist you today? I'm your friendly shopping assistant, ShopMate, here to make your shopping experience seamless! 🛒✨"
+
+  utter_iamabot:
+    - text: "I am ShopMate, your smart e-commerce assistant powered by Rasa! 🤖💬 Ready to help you with your shopping needs anytime!"
+
+  utter_product_inquiry:
+    - text: "Here are the details of {product}: 📦\n{product_details}\nI hope this helps! Let me know if you'd like to know more. 🛍️"
+
+  utter_bargain_offer:
+    - text: "Good news! 🎉 I can offer you a {discount}% discount on {product}. 💸 Don't miss out on this deal! Would you like to claim it now? 🤔"
+
+  utter_greet_hin:
+    - text: "नमस्ते! 😊 मैं आपकी कैसे मदद कर सकता हूँ? मैं आपका दोस्त ShopMate, आपके ऑनलाइन शॉपिंग अनुभव को आसान बनाने के लिए यहाँ हूँ! 🛒✨"
+
+  utter_iamabot_hin:
+    - text: "मैं ShopMate, आपका स्मार्ट ई-कॉमर्स सहायक, रासा द्वारा संचालित एक बॉट हूँ! 🤖💬 आपकी खरीदारी के सभी सवालों में मदद के लिए हमेशा तैयार!"
+
+  utter_product_inquiry_hin:
+    - text: "{product} के विवरण यहाँ हैं: 📦\n{product_details}\nमुझे उम्मीद है कि यह आपकी मदद करेगा! यदि आपको और जानकारी चाहिए, तो बताएं। 🛍️"
+
+  utter_bargain_offer_hin:
+    - text: "अच्छी खबर! 🎉 मैं आपको {product} पर {discount}% की छूट दे सकता हूँ। 💸 इस डील को मिस मत कीजिए! क्या आप इसे अभी दावा करना चाहेंगे? 🤔"
+
+  utter_ask_order_id:
+    - text: "Please provide me with your order ID so I can help you track your order. 📦"
+
+  utter_ask_order_id_hin:
+    - text: "कृपया मुझे आपका ऑर्डर आईडी प्रदान करें ताकि मैं आपकी ऑर्डर को ट्रैक कर सकूं। 📦"
+
+  utter_ask_order_id_alt:
+    - text: "I need your order ID to assist you further. Can you share it with me? 🔍"
+
+  utter_ask_order_id_alt_hin:
+    - text: "मुझे आपकी मदद करने के लिए आपका ऑर्डर आईडी चाहिए। क्या आप इसे साझा कर सकते हैं? 🔍"
+
+actions:
+  - action_fetch_product_details
+  - action_bargain_logic
+  - action_fallback_with_menu
+
+
+forms:
+  track_order_form:
+    required_slots:
+      - order_id

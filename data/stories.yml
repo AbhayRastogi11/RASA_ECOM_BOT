@@ -1,0 +1,56 @@
+version: "3.1"
+
+stories:
+
+- story: greeting story
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: product inquiry
+  steps:
+  - intent: product_inquiry
+  - action: action_fetch_product_details
+
+- story: bargain
+  steps:
+  - intent: bargain
+  - action: action_bargain_logic
+
+- story: order tracking
+  steps:
+  - intent: order_tracking
+  - action: utter_ask_order_id
+  - action: track_order_form
+
+- story: fallback
+  steps:
+  - intent: fallback
+  - action: action_fallback_with_menu
+
+- story: greeting story hindi
+  steps:
+  - intent: greet_hin
+  - action: utter_greet_hin
+
+- story: product inquiry hindi
+  steps:
+  - intent: product_inquiry_hin
+  - action: action_fetch_product_details
+
+- story: bargain hindi
+  steps:
+  - intent: bargain_hin
+  - action: action_bargain_logic
+
+- story: order tracking hindi
+  steps:
+  - intent: order_tracking_hin
+  - action: utter_ask_order_id_hin
+  - action: track_order_form
+
+- story: fallback hindi
+  steps:
+  - intent: fallback_hin
+  - action: action_fallback_with_menu
+
